@@ -93,7 +93,7 @@ body {
         Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     font-size: 15px;
     text-align: justify;
-    line-height: 1.1;
+    line-height: 1.2;
     word-wrap: break-word;
 }
 
@@ -853,11 +853,10 @@ body pre {
 body pre > code {
     padding: 0;
     margin: 0;
-    font-size: 100%;
+    font-size: 120%;
     word-break: normal;
     white-space: pre;
     background: transparent;
-    border: 0;
 }
 
 body .highlight {
@@ -1038,6 +1037,7 @@ body .task-list-item input {
     vertical-align: middle;
 }
 
+
 figure {
     display: table;
     border: 2px solid #cbf5ef;
@@ -1060,32 +1060,57 @@ figcaption {
 }
 
 figcaption::before{
-    content: "FIG: ";
+    content: "Fig." counter(figcounter) ": ";
+    counter-increment: figcounter;
     font-weight: 1000;
     color: #0a0a0a;
 }
 
+body {
+    counter-reset: h1counter figcounter;
+}
+
+h1 {
+    counter-reset: h2counter;
+}
+h2 {
+    counter-reset: h3counter;
+}
+h3 {
+    counter-reset: h4counter;
+}
+
 h1::before
 {
-  content: ' H1 ';
-  font-size: 20px;
-  color: #a19d9d;
+  content: counter(h1counter) " ";
+  counter-increment: h1counter;
+  /*font-size: 20px;*/
+  /*color: #a19d9d;*/
   margin-left: 10px;
 }
 
 h2::before
 {
-  content: ' H2 ';
-  font-size: 15px;
-  color: #a19d9d;
+  content: counter(h1counter) "." counter(h2counter) " ";
+  counter-increment: h2counter;
+  /*font-size: 15px;*/
+  /*color: #a19d9d;*/
   margin-left: 10px;
 }
 
 h3::before
 {
-  content: ' H3 ';
-  font-size: 15px;
-  color: #a19d9d;
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) " ";
+  counter-increment: h3counter;
+/*  font-size: 15px;
+  color: #a19d9d;*/
+  margin-left: 10px;
+}
+
+h4::before
+{
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) " ";
+  counter-increment: h4counter;
   margin-left: 10px;
 }
 
