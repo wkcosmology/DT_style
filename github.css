@@ -1,31 +1,38 @@
+:root{
+    --black-basic: #393b3b;
+    --blacker-basic: #161b1f;
+    --white-basic: #babcbf;
+    --whiter-basic: #dadada;
+    --gray-basic: #ccccca;
+    --grayer-basic: #e8e6e6;
+}
+
 /* Enable smooth scrolling */
 @media screen and (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
 /* Style the button */
 .top-link {
-  transition:       all .25s ease-in-out;
-  position:         fixed;
-  bottom:           0;
-  right:            0;
-  display:          inline-flex;
-  color:            #000000;
+    transition: all 0.25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    color: #000000;
 
-  cursor:           pointer;
-  align-items:      center;
-  justify-content:  center;
-  margin:           0 2em 2em 0;
-  border-radius:    50%;
-  padding:          .25em;
-  width:            1em;
-  height:           1em;
-  background-color: #F8F8F8;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2em 2em 0;
+    border-radius: 50%;
+    padding: 0.25em;
+    width: 1em;
+    height: 1em;
+    background-color: #f8f8f8;
 }
-
-
 
 body .octicon {
     display: inline-block;
@@ -89,12 +96,18 @@ body {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     color: #24292e;
-    font-family: MiscFixedSC613, Iosevka, CMU serif, -apple-system, BlinkMacSystemFont, Segoe UI,
-        Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-family: MiscFixedSC613, Iosevka, CMU serif, -apple-system,
+        BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji;
     font-size: 15px;
     text-align: justify;
     line-height: 1.2;
     word-wrap: break-word;
+    margin: 30px;
+}
+
+body p{
+    margin: 20px;
 }
 
 body details {
@@ -120,14 +133,14 @@ body strong {
 }
 
 body img {
-    font-family: Iosevka, monospace;
+    font-family: MiscFixedSC613, monospace;
     border-style: none;
 }
 
 body code,
 body kbd,
 body pre {
-    font-family: Iosevka, monospace;
+    font-family: MiscFixedSC613, monospace;
     font-size: 15px;
 }
 
@@ -228,37 +241,38 @@ body h5,
 body h6 {
     display: table;
     font-family: MiscFixedSC613, Georgia;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     font-weight: 600;
     text-align: justify;
 }
 
 body h1 {
-    display: table;
     font-size: 22px;
-    background: #ccccca;
+    background: var(--gray-basic);
     border-radius: 10px;
     padding: 5px 20px 5px 0px;
 }
 
-
 body h2 {
     font-size: 20px;
-    background: #e3e3e1;
+    background: var(--grayer-basic);
     border-radius: 10px;
     padding: 5px 20px 5px 0px;
     text-align: left;
 }
 
 body h3 {
-    font-size: 22px;
+    font-size: 18px;
     display: table;
-    /*font-size: 27px;*/
     font-weight: 600;
-    background: #f5f5f2;
+    background: var(--grayer-basic);
     border-radius: 10px;
     padding: 5px 20px 5px 0px;
+}
+
+body h4{
+    font-size: 16px;
 }
 
 body p {
@@ -295,7 +309,7 @@ body dd {
 
 body code,
 body pre {
-    font-family: Iosevka, CMU serif, SFMono-Regular, Consolas, Liberation Mono,
+    font-family: MiscFixedSC613, CMU serif, SFMono-Regular, Consolas, Liberation Mono,
         Menlo, monospace;
     font-size: 12px;
 }
@@ -682,53 +696,6 @@ body blockquote > :last-child {
     margin-bottom: 0;
 }
 
-/* body h1, */
-/* body h2, */
-/* body h3, */
-/* body h4, */
-/* body h5, */
-/* body h6 { */
-/*     margin-top: 24px; */
-/*     margin-bottom: 16px; */
-/*     font-weight: 600; */
-/*     line-height: 1.25; */
-/* } */
-
-/* body h1 { */
-/*     font-size: 2em; */
-/* } */
-/**/
-/* body h1, */
-/* body h2 { */
-/*     padding-bottom: 0.3em; */
-/*     text-align: left; */
-/* /*    border-bottom: 1px solid #eaecef; */ */
-/* } */
-
-/* body h2 { */
-/*     font-size: 1.5em; */
-/* } */
-
-/* body h3 { */
-/*     font-size: 1.25em; */
-/*     text-align: justify; */
-/* } */
-
-body h4 {
-    /* font-size: 1em; */
-    /* text-align: justify; */
-}
-
-body h5 {
-    /* font-size: 0.875em; */
-    /* text-align: justify; */
-}
-/**/
-/* body h6 { */
-/*     font-size: 0.85em; */
-/*     color: #6a737d; */
-/* } */
-
 body ol,
 body ul {
     padding-left: 2em;
@@ -797,7 +764,7 @@ body table tr:nth-child(2n) {
 }
 
 body img {
-    font-family: Iosevka, monospace;
+    font-family: MiscFixedSC613, monospace;
     max-width: 100%;
     box-sizing: initial;
     background-color: #fff;
@@ -890,7 +857,7 @@ body .blob-num {
     min-width: 50px;
     padding-right: 10px;
     padding-left: 10px;
-    font-family: Iosevka, SFMono-Regular, Consolas, Liberation Mono, Menlo,
+    font-family: MiscFixedSC613, SFMono-Regular, Consolas, Liberation Mono, Menlo,
         monospace;
     font-size: 12px;
     line-height: 20px;
@@ -923,7 +890,7 @@ body .blob-code {
 
 body .blob-code-inner {
     overflow: visible;
-    font-family: Iosevka, SFMono-Regular, Consolas, Liberation Mono, Menlo,
+    font-family: MiscFixedSC613, SFMono-Regular, Consolas, Liberation Mono, Menlo,
         monospace;
     font-size: 12px;
     color: #24292e;
@@ -1010,7 +977,6 @@ body .task-list-item input {
     vertical-align: middle;
 }
 
-
 figure {
     display: table;
     border: 2px solid #cbf5ef;
@@ -1021,18 +987,16 @@ figure {
 
 figcaption {
     display: table-caption;
-    caption-side: bottom ;
+    caption-side: bottom;
     text-align: justify;
     color: #22272e;
-    /*background-color: #e7e7e8;*/
     background-color: #daf4f7;
     padding: 10px;
     border-radius: 0px 0px 10px 10px;
     border-color: #ffffff;
-    /*box-shadow: 3px 3px 3px #ffffff;*/
 }
 
-figcaption::before{
+figcaption::before {
     content: "Fig." counter(figcounter) ": ";
     counter-increment: figcounter;
     font-weight: 1000;
@@ -1049,43 +1013,68 @@ h1 {
 h2 {
     counter-reset: h3counter;
 }
-/* h3 { */
-/*     counter-reset: h4counter; */
-/* } */
 
-h1::before
-{
-  content: counter(h1counter) " ";
-  counter-increment: h1counter;
-  /*font-size: 20px;*/
-  /*color: #a19d9d;*/
-  margin-left: 10px;
+h1::before,
+h2::before,
+h3:before {
+    color: var(--black-basic);
+    margin-left: 10px;
 }
 
-h2::before
-{
-  content: counter(h1counter) "." counter(h2counter) " ";
-  counter-increment: h2counter;
-  /*font-size: 15px;*/
-  /*color: #a19d9d;*/
-  margin-left: 10px;
+h1::before {
+    content: counter(h1counter) " ";
+    counter-increment: h1counter;
 }
 
-h3::before
-{
-  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) " ";
-  counter-increment: h3counter;
-/*  font-size: 15px;
-  color: #a19d9d;*/
-  margin-left: 10px;
+h2::before {
+    content: counter(h1counter) "." counter(h2counter) " ";
+    counter-increment: h2counter;
 }
 
-/* h4::before */
-/* { */
-/*   content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) " "; */
-/*   counter-increment: h4counter; */
-/*   margin-left: 10px; */
-/* } */
+h3::before {
+    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter, lower-alpha)
+        " ";
+    counter-increment: h3counter;
+}
 
+h4::before {
+    content: "↪";
+}
 
+.TOC {
+    border: 2px solid var(--gray-basic);;
+    background: var(--grayer-basic);
+    border-radius: 5px;
+    padding: 10px;
+}
 
+.TOC ul {
+    padding-left: 10px;
+    counter-reset: item;
+    list-style-type: none;
+}
+
+.TOC ul > li::before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: var(--black-basic);
+    font-weight: 600;
+}
+
+.TOC ul ul ul li::before {
+    content: counter(item, lower-alpha) ". ";
+    counter-increment: item;
+    color: var(--black-basic);
+    font-weight: 600;
+}
+
+.TOC ul ul li {
+    border-left: 1px dashed var(--gray-basic);
+    margin-top: 2px;
+    margin-left: -8px;
+    padding-left: 20px;
+}
+
+.TOC ul ul ul ul {
+    display: none;
+}
