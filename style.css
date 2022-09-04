@@ -1,0 +1,354 @@
+/* macros */
+:root {
+    --font-basic: MiscFixedSC613;
+    --font-head: MiscFixedSC613;
+    --black-basic: #393b3b;
+    --blacker-basic: #161b1f;
+    --white-basic: #babcbf;
+    --whiter-basic: #dadada;
+    --gray-basic: #ccccca;
+    --darkgray-basic: #7d7c7c;
+    --grayer-basic: #e8e6e6;
+    --cyan-basic: #cbf5ef;
+}
+
+/* Define the baseline:
+   define a small left margin
+   choose a serif font for all text
+   set the mode to light (dark on black)
+   remove all internal padding of the body element
+   set the maximum width for text to 55 characters */
+body {
+    margin: 2em;
+    font-family: var(--font-basic);
+    font-size: 1em;
+    color: var(--black-basic);
+    background-color: white;
+    padding: 0;
+    text-aligh: justify;
+    line-height: 1.3em;
+    word-wrap: break-word;
+    counter-reset: h1counter figcounter tablecounter;
+    max-width: 70em;
+}
+
+p {
+    margin: 1em;
+}
+
+/* Link style */
+a {
+    text-decoration: none;
+}
+
+/* The table of content
+ * 1. h1 and h2 are indexed with numbers, h3 is indexed with abc, h4 does not display
+ * 2. a faint dashed indent line
+   */
+.TOC {
+    border: 2px solid var(--gray-basic);
+    background: var(--grayer-basic);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.TOC ul {
+    padding-left: 0.7em;
+    counter-reset: item;
+    list-style-type: none;
+    line-height: 1.5em;
+    margin-left: -0.5em;
+}
+
+.TOC ul > li::before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: var(--black-basic);
+}
+
+.TOC ul ul ul li::before {
+    content: counter(item, lower-alpha) ". ";
+    counter-increment: item;
+    color: var(--black-basic);
+}
+
+.TOC ul ul li {
+    border-left: 1px dashed var(--gray-basic);
+    padding-left: 1.3em;
+}
+
+.TOC ul ul ul ul {
+    display: none; /* do not display h4 on TOC */
+}
+
+/* Heading setting */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: table;
+    font-family: MiscFixedSC613, Georgia;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.3em;
+    font-weight: 600;
+    text-align: left;
+}
+
+h1 {
+    font-size: 1.6em;
+    background: var(--gray-basic);
+    border-radius: 10px;
+    color: var(--blacker-basic);
+}
+
+h2 {
+    font-size: 1.4em;
+    background: var(--grayer-basic);
+    border-radius: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    background: var(--grayer-basic);
+    border-radius: 10px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h1 {
+    counter-reset: h2counter;
+}
+h2 {
+    counter-reset: h3counter;
+}
+
+h1::before,
+h2::before,
+h3:before {
+    color: var(--black-basic);
+    margin-left: 10px;
+}
+
+h1::before {
+    content: counter(h1counter) " ";
+    counter-increment: h1counter;
+}
+
+h2::before {
+    content: counter(h1counter) "." counter(h2counter) " ";
+    counter-increment: h2counter;
+}
+
+h3::before {
+    content: counter(h1counter) "." counter(h2counter) "."
+        counter(h3counter, lower-alpha) " ";
+    counter-increment: h3counter;
+}
+
+h4::before {
+    content: "↪ ";
+}
+
+/* List setting */
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -0.5em;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -1.2em;
+}
+
+ol ol,
+ul ol {
+    list-style-type: decimal;
+}
+
+ol ol ol,
+ol ul ol,
+ul ol ol,
+ul ul ol {
+    list-style-type: lower-alpha;
+}
+
+/* Code samples
+   Enclose code in a light grey box (border, background-color)
+   Add some padding so the text is not too close to the box */
+pre {
+    display: table;
+    padding: 1em;
+    border: 1px solid var(--darkgray-basic);
+    border-radius: 10px;
+    background-color: var(--grayer-basic);
+}
+
+code {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    background-color: var(--grayer-basic);
+}
+
+/* Image, figure and figure caption */
+img {
+    max-width: 100%;
+    box-sizing: initial;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure {
+    display: table;
+    border: 2px solid var(--cyan-basic);
+    padding: 1em;
+    border-radius: 1em 1em 0em 0em;
+}
+
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    color: var(--black-basic);
+    background-color: var(--cyan-basic);
+    padding: 1em;
+    border: 2px solid var(--cyan-basic);
+    border-radius: 0em 0em 1em 1em;
+}
+
+figcaption::before {
+    content: "Fig." counter(figcounter) ": ";
+    counter-increment: figcounter;
+    font-weight: 600;
+}
+
+/* Blockquotes
+  Indent by 2em from normal paragraphs
+  display a vertical red line at the left */
+body blockquote {
+    color: var(--darkgray-basic);
+    border-left: 0.1em solid var(--gray-basic);
+    margin-left: 2em;
+    padding-left: 1em;
+}
+
+/* Table config */
+table {
+    margin-top: 1.5em;
+    border-collapse: collapse;
+    border: 1px solid var(--black-basic);
+    overflow: auto;
+    margin-left: 2em;
+    margin-right: auto;
+}
+body table td,
+body table th {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+/* Table header cells
+  Set background to a light blue */
+tr > th {
+    background-color: var(--gray-basic);
+}
+/* All table cells 
+  Define a border
+  Give the text inside the cells some space from this border (padding) */
+table :is(td, th) {
+    border: 1px solid var(--black-basic);
+    padding: 0.3em;
+}
+/* Every 2nd table row
+  set background to a blue that is slightly lighter than the one used in the
+  header */
+tbody > tr:nth-child(even) {
+    background-color: var(--grayer-basic);
+}
+
+table caption {
+    display: table-caption;
+    caption-side: bottom;
+    text-align: justify;
+    color: var(--black-basic);
+    background-color: var(--cyan-basic);
+    padding: 1em;
+    border-radius: 0em 0em 1em 1em;
+}
+
+table caption::before {
+    content: "Table. " counter(tablecounter) ": ";
+    counter-increment: tablecounter;
+    font-weight: 1000;
+    color: #0a0a0a;
+}
+
+/* Math setting */
+.math {
+    line-height: 1.3em;
+}
+
+/* Enable smooth scrolling */
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Style the button */
+.top-link {
+    transition: all 0.25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    color: var(--black-basic);
+
+    cursor: pointer;
+    font-size: 0.8em;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2em 2em 0;
+    border-radius: 50%;
+    border: 2px solid var(--gray-basic);
+    padding: 0.5em;
+    width: 2em;
+    height: 2em;
+    background-color: var(--grayer-basic);
+}
+
+/** All the following styles apply only to the printed version, i.e. PDF **/
+@media only print {
+    body {
+        font-size: 1em;
+    }
+    /* Prevent page breaks immediately after h2 and and h3 headings */
+    h3,
+    h2 {
+        break-after: avoid;
+    }
+    /* Prevent page breaks in the middle of tables, figures and code samples */
+    table,
+    pre,
+    figure {
+        break-inside: avoid;
+    }
+    /* Ensure that there are at least three lines of text
+     at the top and bottom of each page */
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+    /* Add the link target to links
+    but only for links inside normal paragraphs. 
+    That makes sure that the link targets do not appear in the table of content */
+    p a::after {
+        content: " (" attr(href) " )";
+        color: #9999ff;
+    }
+}
