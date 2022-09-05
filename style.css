@@ -49,7 +49,8 @@ a {
     border: 2px solid var(--gray-basic);
     background: var(--grayer-basic);
     border-radius: 10px;
-    padding: 1em;
+    padding: 0.5em;
+    padding-left: 2em;
 }
 
 .TOC ul {
@@ -90,6 +91,7 @@ h5,
 h6 {
     display: table;
     font-family: MiscFixedSC613, Georgia;
+    line-height: 1.2em;
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 0.3em;
@@ -155,13 +157,14 @@ h4::before {
 }
 
 /* List setting */
-ol {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: -0.5em;
+
+p ul ol,
+p ul ol {
+    margin-left: 0.8em;
 }
 
-ul {
+ul ul,
+ol ul {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: -1.2em;
