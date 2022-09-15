@@ -9,6 +9,7 @@
     --gray-basic: #ccccca;
     --darkgray-basic: #7d7c7c;
     --grayer-basic: #e8e6e6;
+    --grayerr-basic: #f5f5f5;
     --cyan-basic: #cbf5ef;
 }
 
@@ -29,7 +30,7 @@ body {
     line-height: 1.3em;
     word-wrap: break-word;
     counter-reset: h1counter figcounter tablecounter;
-    max-width: 70em;
+    max-width: 100em;
 }
 
 p {
@@ -92,8 +93,8 @@ h6 {
     display: table;
     font-family: MiscFixedSC613, Georgia;
     line-height: 1.2em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     padding: 0.3em;
     font-weight: 600;
     text-align: left;
@@ -114,12 +115,15 @@ h2 {
 
 h3 {
     font-size: 1.2em;
-    background: var(--grayer-basic);
+    /* background: ; */
     border-radius: 10px;
+    padding-left: 0.3em;
+    background: linear-gradient(to right, var(--grayerr-basic), var(--grayer-basic));
 }
 
 h4 {
     font-size: 1em;
+    margin-left: 0.5em;
 }
 
 h1 {
@@ -147,8 +151,9 @@ h2::before {
 }
 
 h3::before {
-    content: counter(h1counter) "." counter(h2counter) "."
-        counter(h3counter, lower-alpha) " ";
+    /* content: counter(h1counter) "." counter(h2counter) "." */
+    /*     counter(h3counter, lower-alpha) " "; */
+    content: counter(h3counter, lower-alpha) ". ";
     counter-increment: h3counter;
 }
 
