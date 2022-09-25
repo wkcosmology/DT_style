@@ -30,6 +30,7 @@ body {
     line-height: 1.3em;
     word-wrap: break-word;
     counter-reset: h1counter figcounter tablecounter;
+    max-width: 100em;
 }
 
 p {
