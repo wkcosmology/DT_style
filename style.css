@@ -118,15 +118,11 @@ h3 {
     /* background: ; */
     border-radius: 10px;
     padding-left: 0.3em;
-<<<<<<< HEAD
     background: linear-gradient(
         to right,
         var(--grayerr-basic),
         var(--grayer-basic)
     );
-=======
-    background: linear-gradient(to right, var(--grayerr-basic), var(--grayer-basic));
->>>>>>> 6498e02934be305f337b5091a9be74054ee919ef
 }
 
 h4 {
