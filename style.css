@@ -91,7 +91,7 @@ h4,
 h5,
 h6 {
     display: table;
-    font-family: MiscFixedSC613, Georgia;
+    font-family: var(--font-head), Georgia;
     line-height: 1.2em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
