@@ -1,7 +1,7 @@
 /* macros */
 :root {
-    --font-basic: MiscFixedSC613;
-    --font-head: MiscFixedSC613;
+    --font-basic: Chalkboard;
+    --font-head: Chalkboard;
     --black-basic: #393b3b;
     --blacker-basic: #161b1f;
     --white-basic: #babcbf;
@@ -93,36 +93,31 @@ h6 {
     display: table;
     font-family: var(--font-head), Georgia;
     line-height: 1.2em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0.3em;
+    padding: 0.em;
     font-weight: 600;
     text-align: left;
+    font-family: Helvetica;
 }
 
 h1 {
     font-size: 1.6em;
-    background: var(--gray-basic);
-    border-radius: 10px;
+    text-transform: uppercase;
+    border-top: 3px inset var(--darkgray-basic);
+    padding-top: 1em;
+    display: block;
     color: var(--blacker-basic);
 }
 
+
 h2 {
-    font-size: 1.4em;
-    background: var(--grayer-basic);
+    font-size: 1.3em;
     border-radius: 10px;
+    color: var(--black-basic);
 }
 
 h3 {
-    font-size: 1.2em;
-    /* background: ; */
-    border-radius: 10px;
+    font-size: 1.em;
     padding-left: 0.3em;
-    background: linear-gradient(
-        to right,
-        var(--grayerr-basic),
-        var(--grayer-basic)
-    );
 }
 
 h4 {
@@ -170,6 +165,7 @@ h4::before {
 p ul ol,
 p ul ol {
     margin-left: 0.8em;
+    text-align: justify;
 }
 
 ul ul,
@@ -177,11 +173,13 @@ ol ul {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: -1.2em;
+    text-align: justify;
 }
 
 ol ol,
 ul ol {
     list-style-type: decimal;
+    text-align: justify;
 }
 
 ol ol ol,
@@ -189,6 +187,7 @@ ol ul ol,
 ul ol ol,
 ul ul ol {
     list-style-type: lower-alpha;
+    text-align: justify;
 }
 
 /* Code samples
