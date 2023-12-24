@@ -10,6 +10,7 @@
     --darkgray-basic: #7d7c7c;
     --grayer-basic: #e8e6e6;
     --grayerr-basic: #f5f5f5;
+    --light-gray-basic: #3D3D3D;
     --cyan-basic: #cbf5ef;
 }
 
@@ -101,7 +102,7 @@ h6 {
 h1 {
     font-size: 1.6em;
     text-transform: uppercase;
-    border-top: 3px inset var(--darkgray-basic);
+    border-top: 3px solid var(--light-gray-basic);
     padding-top: 1em;
     display: block;
     color: var(--blacker-basic);
