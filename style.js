@@ -1,0 +1,1 @@
+<script src="http://mathjax.josephjctang.com/MathJax.js?config=TeX-MML-AM_HTMLorMML" id="MathJax-script"></script>

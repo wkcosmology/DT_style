@@ -1,6 +1,6 @@
 /* macros */
 :root {
-    --font-basic: "Chalkboard SE";
+    --font-basic: "Avenir";
     --font-head: Helvetica;
     --black-basic: #393b3b;
     --blacker-basic: #161b1f;
@@ -28,7 +28,7 @@ body {
     background-color: white;
     padding: 0;
     text-aligh: justify;
-    line-height: 1.3em;
+    line-height: 1.5em;
     word-wrap: break-word;
     counter-reset: h1counter figcounter tablecounter;
     max-width: 100em;
@@ -202,9 +202,10 @@ pre {
 }
 
 code {
+    font-family: Menlo;
     padding-left: 0.2em;
     padding-right: 0.2em;
-    background-color: var(--grayer-basic);
+    background-color: #d9feff;
 }
 
 /* Image, figure and figure caption */
