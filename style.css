@@ -195,17 +195,20 @@ ul ul ol {
    Add some padding so the text is not too close to the box */
 pre {
     display: table;
-    padding: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 3em;
     border: 1px solid var(--darkgray-basic);
     border-radius: 10px;
-    background-color: var(--grayer-basic);
+    background-color: var(--grayerr-basic);
 }
 
 code {
-    font-family: Menlo;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-    background-color: #d9feff;
+    font-family: Monaco;
+    font-size: 0.8em;
+    background-color: var(--grayerr-basic);
 }
 
 /* Image, figure and figure caption */
