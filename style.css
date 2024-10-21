@@ -194,7 +194,7 @@ ul ul ol {
    Enclose code in a light grey box (border, background-color)
    Add some padding so the text is not too close to the box */
 pre {
-    display: table;
+/*    display: table;*/
     padding-top: 0.3em;
     padding-bottom: 0.3em;
     padding-left: 1em;
@@ -367,35 +367,4 @@ table caption::before {
     width: 2em;
     height: 2em;
     background-color: var(--grayer-basic);
-}
-
-/** All the following styles apply only to the printed version, i.e. PDF **/
-@media only print {
-    body {
-        font-size: 1em;
-    }
-    /* Prevent page breaks immediately after h2 and and h3 headings */
-    h3,
-    h2 {
-        break-after: avoid;
-    }
-    /* Prevent page breaks in the middle of tables, figures and code samples */
-    table,
-    pre,
-    figure {
-        break-inside: avoid;
-    }
-    /* Ensure that there are at least three lines of text
-     at the top and bottom of each page */
-    p {
-        orphans: 3;
-        widows: 3;
-    }
-    /* Add the link target to links
-    but only for links inside normal paragraphs. 
-    That makes sure that the link targets do not appear in the table of content */
-    p a::after {
-        content: " (" attr(href) " )";
-        color: #9999ff;
-    }
 }
