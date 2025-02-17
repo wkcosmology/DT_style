@@ -205,11 +205,17 @@ pre {
     background-color: var(--grayerr-basic);
 }
 
-code {
-    font-family: Monaco;
-    font-size: 0.8em;
-    background-color: var(--grayerr-basic);
+pre code{
+    font-family: "Monaco" !important;
+    font-size: 0.8em !important;
 }
+
+code {
+    font-family: "Monaco";
+    font-size: 0.8em;
+    /*background-color: var(--grayer-basic);*/
+}
+
 
 /* Image, figure and figure caption */
 img {
@@ -254,7 +260,7 @@ body blockquote {
 }
 
 legend {
-    font-family: Iosevka;
+    font-family: Monaco;
     font-weight: 600;
     font-size: 1.5em;
 }
