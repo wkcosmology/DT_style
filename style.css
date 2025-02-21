@@ -206,14 +206,18 @@ pre {
 }
 
 pre code{
-    font-family: "Monaco" !important;
+    font-family: "CommitMono" !important;
     font-size: 0.8em !important;
 }
 
 code {
-    font-family: "Monaco";
+    font-family: "CommitMono";
     font-size: 0.8em;
-    /*background-color: var(--grayer-basic);*/
+    background-color: var(--grayer-basic);
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
 }
 
 
