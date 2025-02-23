@@ -1,7 +1,8 @@
 /* macros */
 :root {
     --font-basic: "Avenir";
-    --font-head: Helvetica;
+    --font-mono: "CommitMono";
+    --font-head: "Helvetica";
     --black-basic: #393b3b;
     --blacker-basic: #161b1f;
     --white-basic: #babcbf;
@@ -206,14 +207,14 @@ pre {
 }
 
 pre code{
-    font-family: "CommitMono" !important;
+    font-family: var(--font-mono) !important;
     font-size: 0.8em !important;
 }
 
 code {
-    font-family: "CommitMono";
+    font-family: var(--font-mono);
     font-size: 0.8em;
-    background-color: var(--grayer-basic);
+    background-color: var(--whiter-basic);
     padding-left: 0.3em;
     padding-right: 0.3em;
     padding-top: 0.1em;
